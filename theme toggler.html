@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --bg-color:#fff;
+            --text-color:#000;
+        }
+
+
+ [data-theme="dark"]{
+    --bg-color:#000;
+    --text-color:#fff;
+ }
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.9s, color 0.6s;
+}
+
+
+       button{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+       }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum nihil iusto tempore reprehenderit qui sed nostrum praesentium incidunt rerum odio sit, eveniet unde, reiciendis veniam voluptas tenetur! Ipsa, magnam quas.</p>
+    <button onclick="ToggleTheme()">Toggle</button>
+
+
+    <script>
+        function ToggleTheme(){
+            document.documentElement.dataset.theme=document.documentElement.dataset.theme==='dark' ?'':'dark';
+        }
+    </script>
+</body>
+</html>
